@@ -1,1 +1,3 @@
-require('./bootstrap');
+function doSomething() {
+    alert('Judihui');
+}
