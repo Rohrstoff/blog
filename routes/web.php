@@ -16,8 +16,13 @@ use App\Http\Controllers\BlogController;
 
 Route::get('/', [BlogController::class, 'index'] );
 
-Route::get('/blog', function () {
+Route::get('/blog', function ()
+{
     return view('admin.blog');
 });
 
 Route::post( '/blog', [BlogController::class, 'save'] );
+
+Route::get( '/blog/{id}', [BlogController::class, 'edit'] );
+
+Route::put( '/blog/{id}', [BlogController::class, 'update'] );

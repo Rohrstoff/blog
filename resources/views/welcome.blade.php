@@ -9,7 +9,7 @@
             <a href="#" class="list-group-item list-group-item-action" aria-current="true">
                 <div class="d-flex w-100 justify-content-between">
                     <h5 class="mb-1">{{ $blog->title }}</h5>
-                    <small>3 days ago</small>
+                    <button onclick="editBlog( {{ $blog->id }} )" class="btn btn-warning btn-sm">Bearbeiten</button>
                 </div>
                 <p class="mb-1">{{ $blog->lead }}</p>
                 <small>{{ $blog->content }}</small>
@@ -21,9 +21,8 @@
         <a href="/blog" class="btn btn-success btn-lg col-md-12">Neuer Blog erstellen</a>
     </div>
     <div class="col-md-12">
-        <a href="#" onclick="doSomething()" class="btn btn-danger btn-lg col-md-12">Pointless Button</a>
+        <a href="#" onclick="doSomething()" class="btn btn-danger col-md-12">Pointless Button</a>
     </div>
+    <script src="{{ asset('js/app.js') }}"></script>
 </div>
-
-<script src="{{ asset('js/app.js') }}"></script>
 @endsection
